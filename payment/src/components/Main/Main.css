@@ -1,0 +1,25 @@
+/* src/components/Main.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  
+  #root { 
+    overflow-x: hidden;
+  }
+  
+  .element-style{
+    overflow-x: hidden;
+  }
+    
+  .column{
+    overflow-x: hidden;
+  }
+  
+
+  
+  
