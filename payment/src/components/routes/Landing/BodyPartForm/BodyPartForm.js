@@ -47,37 +47,37 @@ const BodyPartForm = () => {
   });
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    if (!formData.name || !formData.phoneNumber || !formData.email || !formData.selectedDate) {
-      alert('Please fill in all the required fields');
-      return;
-    }
+  //   if (!formData.name || !formData.phoneNumber || !formData.email || !formData.selectedDate) {
+  //     alert('Please fill in all the required fields');
+  //     return;
+  //   }
 
-    const apiUrl = 'https://snyllo-payment.onrender.com/user-details-bookform';
+  //   const apiUrl = 'https://snyllo-payment.onrender.com/user-details-bookform';
 
-    try {
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+  //   try {
+  //     const response = await fetch(apiUrl, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
 
-      if (!response.ok) {
-        throw new Error('Error submitting form');
-      }
+  //     if (!response.ok) {
+  //       throw new Error('Error submitting form');
+  //     }
 
-      console.log('Submission successful');
-      setSubmitStatus('success');
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Error submitting the form. Please try again.');
-      setSubmitStatus('error');
-    }
-  };
+  //     console.log('Submission successful');
+  //     setSubmitStatus('success');
+  //   } catch (error) {
+  //     console.error('Error submitting form:', error);
+  //     alert('Error submitting the form. Please try again.');
+  //     setSubmitStatus('error');
+  //   }
+  // };
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -121,13 +121,12 @@ const BodyPartForm = () => {
       alt="logo"
       />
       <form 
-      onSubmit={handleSubmit} 
+      onSubmit="submit" 
       className='form-payment'
       name='contact v5'
       method='post'
       data-netlify='true'
       data-netlify-honeypot='bot-field'
-      netlify
       >
 
         <input type="hidden" name="form-name" value="contact_v5" />
@@ -228,7 +227,7 @@ const BodyPartForm = () => {
             />
           </label><br /><br />
 
-          <button className='submit-button' type="submit" onClick={handleSubmit}>Proceed to Payment</button>
+          <button className='submit-button' type="submit" onClick="submit">Proceed to Payment</button>
         </form>
         {submitStatus && (
           <p className={submitStatus === 'success' ? 'success-message' : 'error-message'}>
