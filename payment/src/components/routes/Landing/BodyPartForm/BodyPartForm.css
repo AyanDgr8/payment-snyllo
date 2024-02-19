@@ -1,0 +1,67 @@
+/* src/components/routes/LandingPage/BodyPartForm/BodyPartForm.css */
+
+
+.container-payment{
+    height: auto;
+    margin: auto;
+    background-color: azure;
+
+}
+
+.logo{
+    height: 20vh;
+    width:40vw;
+}
+
+.form-payment{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 3rem;
+    text-align: left;
+    font-size: large;
+    border: 1px solid ;
+    width:50vw;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+label{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+input{
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    margin-left: 5rem;
+    width: 15rem;
+}
+
+select{
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    margin-left: 5rem;
+    width: 7rem;
+    font-size: large;
+
+}
+
+.submit-button{
+    width: 30%;
+    padding: 1rem;
+    margin: auto;
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid;
+    border-radius: 1rem;
+    font-size: large;
+}
+
+.submit-button:hover{
+    background-color: brown;
+    color: white;
+}
