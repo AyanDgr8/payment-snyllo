@@ -129,14 +129,6 @@ const BodyPartForm = () => {
           className='logo'
           alt="logo"
           />
-
-          <button className='website'>
-            <a 
-            href="https://snylloestetica.com/"
-            className='linkis'
-            >Snyllo Estetica
-            </a>
-          </button>
         </div>
 
       </section>
@@ -158,7 +150,7 @@ const BodyPartForm = () => {
               type="text" 
               placeholder="Your Name*"
               name="name"
-              className="name-BodyPartForm"
+              className="name"
               value={formData.name} 
               onChange={handleChange} 
               required  
@@ -175,7 +167,7 @@ const BodyPartForm = () => {
               type="text" 
               placeholder="Phone Number*"
               name="phoneNumber"
-              className="telephone-BodyPartForm"
+              className="phoneNumber"
               value={formData.phoneNumber} 
               onChange={handleChange} 
               pattern="[0-9]{10}"
@@ -193,7 +185,7 @@ const BodyPartForm = () => {
               type="email" 
               placeholder="Email Address*"
               name="email"
-              className="email-BodyPartForm"
+              className="email"
               value={formData.email}
               onChange={handleChange}
               required
@@ -288,6 +280,16 @@ const BodyPartForm = () => {
           </p>
         )}
       </div>
+
+      
+
+      <button className='website'>
+            <a 
+            href="https://snylloestetica.com/"
+            className='linkis'
+            >SnylloEstetica.com
+            </a>
+      </button>
     </div>
   );
 };
