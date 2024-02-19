@@ -47,37 +47,37 @@ const BodyPartForm = () => {
   });
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  //   if (!formData.name || !formData.phoneNumber || !formData.email || !formData.selectedDate) {
-  //     alert('Please fill in all the required fields');
-  //     return;
-  //   }
+    if (!formData.name || !formData.phoneNumber || !formData.email || !formData.selectedDate) {
+      alert('Please fill in all the required fields');
+      return;
+    }
 
-  //   const apiUrl = 'https://snyllo-payment.onrender.com/user-details-bookform';
+    const apiUrl = 'https://snyllo-payment.onrender.com/user-details-bookform';
 
-  //   try {
-  //     const response = await fetch(apiUrl, {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify(formData),
-  //     });
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-  //     if (!response.ok) {
-  //       throw new Error('Error submitting form');
-  //     }
+      if (!response.ok) {
+        throw new Error('Error submitting form');
+      }
 
-  //     console.log('Submission successful');
-  //     setSubmitStatus('success');
-  //   } catch (error) {
-  //     console.error('Error submitting form:', error);
-  //     alert('Error submitting the form. Please try again.');
-  //     setSubmitStatus('error');
-  //   }
-  // };
+      console.log('Submission successful');
+      setSubmitStatus('success');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error submitting the form. Please try again.');
+      setSubmitStatus('error');
+    }
+  };
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -106,6 +106,7 @@ const BodyPartForm = () => {
     }
   };
   
+  
   const calculateTotalPrice = () => {
     const selectedPriceMap = formData.purchaseType === 'trial' ? trialMap : permanentMap;
     return formData.selectedBodyParts.reduce((total, part) => total + selectedPriceMap[part], 0);
@@ -114,93 +115,156 @@ const BodyPartForm = () => {
 
   return (
     <div>
-      <div className='container-payment'>
-      <img 
-      src="/upload/logo.png"
-      className='logo'
-      alt="logo"
-      />
-      <form 
-      onSubmit="submit" 
-      className='form-payment'
-      name='contact v5'
-      method='post'
-      data-netlify='true'
-      data-netlify-honeypot='bot-field'
-      >
+      <section className='above-form'>
 
-        <input type="hidden" name="form-name" value="contact_v5" />
+        <img 
+          src="/upload/yoyo.jpg"
+          className='yoyo'
+          alt="yoyo"
+        />
 
-        <div hidden>
-          <input name="bot-field" />
+        <div className='form-header'>
+          <img 
+          src="/upload/logo.png"
+          className='logo'
+          alt="logo"
+          />
+
+          <button className='website'>
+            <a 
+            href="https://snylloestetica.com/"
+            className='linkis'
+            >Snyllo Estetica
+            </a>
+          </button>
         </div>
+
+      </section>
+      <div className='container-payment'>
         
-        <label className='tags'>
-          Name:
-          <input 
-          type="text" 
-          value={formData.name} 
-          onChange={handleChange} 
-          name="name"
-          required  
-          />
-        </label><br /><br />
+      <form 
+      onSubmit={handleSubmit} 
+      className='form-payment'
+      >
+        <div className='form-heading'>
+          <div className='form-line1'>Book Your Appointment</div>
+        </div>
 
-        <label className='tags'>
-          Phone:
-          <input 
-          type="number" 
-          value={formData.phoneNumber} 
-          onChange={handleChange} 
-          pattern="[0-9]{10}"
-          name="phoneNumber"
-          required
-          />
-        </label><br /><br />
+        
+          <div className='basic'>
+            <label>
+              Name
+              <input 
+              type="text" 
+              placeholder="Your Name*"
+              name="name"
+              className="name-BodyPartForm"
+              value={formData.name} 
+              onChange={handleChange} 
+              required  
+              />
 
-        <label className='tags'>
-          Email:
-          <input 
-          type="email" 
-          value={formData.email} 
-          onChange={handleChange} 
-          name="email"
-          required
-          />
-        </label><br /><br />
+            </label>
 
-          <label className='tags'>
-            Choose Gender:
-            <select 
-            value={formData.gender} 
-            onChange={handleChange}
-            name="gender"
-            required
-            >
-              <option value="men">Men</option>
-              <option value="women">Women</option>
-              <option value="others">Others</option>
-            </select>
-          </label><br /><br />
+            
+            
+            <label>
+              Contact
 
-          <label className='tags'>
-            Choose Purchase Type:
-            <select 
-            value={formData.purchaseType} 
-            onChange={handleChange}
-            name="purchaseType"
-            required
+              <input 
+              type="text" 
+              placeholder="Phone Number*"
+              name="phoneNumber"
+              className="telephone-BodyPartForm"
+              value={formData.phoneNumber} 
+              onChange={handleChange} 
+              pattern="[0-9]{10}"
+              required
+              />
+
+            </label>
+
+            
+            
+            <label>
+              Email
+
+              <input 
+              type="email" 
+              placeholder="Email Address*"
+              name="email"
+              className="email-BodyPartForm"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              />
+
+            </label>
+          </div>
+          
+          
+          
+
+          <div className='based'>
+              <label>
+              Gender
+              <select
+                  type="text"
+                  placeholder="Gender"
+                  name="gender"
+                  className="gender"
+                  value={formData.gender}
+                  onChange={handleChange}
+                  required
+              >
+                      
+                <option value="men">Men</option>
+                <option value="women">Women</option>
+                <option value="others">Others</option>
+
+              </select>
+            </label>
+
+            <label>
+              Select Package
+
+            <select
+                type="text"
+                placeholder="Trial"
+                name="purchaseType"
+                className="purchase"
+                value={formData.purchaseType}
+                onChange={handleChange}
+                required 
             >
               <option value="trial">Trial</option>
               <option value="permanent">Package</option>
-            </select>
-          </label><br /><br />
 
-          <h2>Our Services</h2>
+            </select>
+
+            </label>
+
+
+            <label>
+              Date
+             <input 
+              type="date" 
+              value={formData.selectedDate} 
+              onChange={handleChange} 
+              name="selectedDate"
+              className='tags'
+              required
+             />
+            </label>
+          </div>
+
+          <h2 className='mid-heading'>Our Services</h2>
+
           {availableBodyParts[formData.gender][formData.purchaseType].map(part => (
             <label key={part}>
               <input 
                 type="checkbox" 
+                className='types'
                 value={part} 
                 checked={formData.selectedBodyParts.includes(part)} 
                 onChange={handleChange} 
@@ -212,22 +276,11 @@ const BodyPartForm = () => {
           <br /><br />
           
 
-          <label>
+          <label className='total'>
             Total Amount: ₹{calculateTotalPrice()}
           </label><br /><br />
 
-          <label className='tags'>
-            Select Date:
-            <input 
-            type="date" 
-            value={formData.selectedDate} 
-            onChange={handleChange} 
-            name="selectedDate"
-            required
-            />
-          </label><br /><br />
-
-          <button className='submit-button' type="submit" onClick="submit">Proceed to Payment</button>
+          <button className='submit-button' type="submit" onClick={handleSubmit}>Proceed to Payment</button>
         </form>
         {submitStatus && (
           <p className={submitStatus === 'success' ? 'success-message' : 'error-message'}>

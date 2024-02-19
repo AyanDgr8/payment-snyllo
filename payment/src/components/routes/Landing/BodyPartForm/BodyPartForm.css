@@ -1,52 +1,151 @@
 /* src/components/routes/LandingPage/BodyPartForm/BodyPartForm.css */
 
 
-.container-payment{
-    height: auto;
-    margin: auto;
-    background-color: azure;
+
+.above-form{
+    position: relative;
+    height: 50vh;
+}
+
+.yoyo{
+    height: 100vh;
+    width:100%;
+    z-index: -1;
+}
+
+.form-header{
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    top:3rem;
+    left:5rem;
+    margin:auto;
 
 }
 
 .logo{
-    height: 20vh;
-    width:40vw;
+    height: 3rem;
+
 }
 
+
+.website{
+    margin-left: 50rem;
+    border: 1px solid;
+    border-radius: 1rem;
+    border: none;
+    padding: 0.75rem;
+    width: 10rem;
+}
+
+.linkis{
+    color:red;
+    text-decoration: none;
+    font-size: large;
+}
+
+.linkis:hover{
+    color: black;
+}
+
+
+.form-heading{
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+
+
+.container-payment{
+    height: auto;
+    position: relative;
+
+}
+
+
 .form-payment{
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: -5rem;
     text-align: left;
     font-size: large;
     border: 1px solid ;
-    width:50vw;
+    border: none;
+    width:80vw;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2rem;
+    background-color: white;
+}
+
+.basic{
+    margin-bottom: 2rem;
 }
 
 label{
-    margin-left: 2rem;
-    margin-bottom: 1rem;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-left: 5rem;
+}
+
+.tags{
+    margin-left: 1rem;
+    width: 9.5rem;
 }
 
 input{
     padding: 0.5rem;
     border: 1px solid;
     border-radius: 0.5rem;
-    margin-left: 5rem;
-    width: 15rem;
+    width: 9rem;
+    color: gray;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
+
 select{
-    padding: 0.5rem;
+    padding: 0.25rem;
     border: 1px solid;
     border-radius: 0.5rem;
-    margin-left: 5rem;
-    width: 7rem;
-    font-size: large;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 6.5rem;
+    color: gray;
+
+}
+.gender{
+    width:9.5rem;
+}
+
+.based{
+    margin-bottom: 2rem;
+}
+
+
+.mid-heading{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.types{
+    margin: auto;
+    margin-left: 19rem;
+}
+
+
+.total{
+    margin:auto ;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
 
 }
 
@@ -57,8 +156,11 @@ select{
     margin-top: -1.5rem;
     margin-bottom: 1rem;
     border: 1px solid;
+    border-color: brown;
     border-radius: 1rem;
     font-size: large;
+    background-color: white;
+    color: brown;
 }
 
 .submit-button:hover{
