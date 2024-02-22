@@ -3,11 +3,11 @@
 
 .above-form{
     position: relative;
-    height: 50vh;
+    height: 40vh;
 }
 
 .yoyo{
-    height: 100vh;
+    height: 140vh;
     width:100%;
     z-index: -1;
 }
@@ -28,14 +28,6 @@
 }
 
 
-.website{
-    margin:auto;
-    border: 1px solid;
-    border-radius: 1rem;
-    border: none;
-    padding: 0.75rem;
-    width: 10rem;
-}
 
 .linkis{
     color:red;
@@ -82,13 +74,20 @@
 }
 
 .basic{
+    margin: auto;
     margin-bottom: 2rem;
+    
 }
 
 label{
     margin: auto;
     margin-bottom: 2rem;
     margin-left: 5rem;
+}
+
+
+.datee{
+    margin-left: 5.1rem;
 }
 
 .tags{
@@ -101,8 +100,12 @@ input{
     border: 1px solid;
     border-radius: 0.5rem;
     width: 9rem;
+    margin: auto;
     margin-left: 1rem;
     margin-right: 1rem;
+}
+.purchase{
+    width:7.75rem;
 }
 
 
@@ -120,6 +123,7 @@ select{
 }
 
 .based{
+    margin: auto;
     margin-bottom: 2rem;
 }
 
@@ -135,8 +139,20 @@ select{
 .types{
     margin: auto;
     margin-left: 19rem;
+    cursor: pointer;
 }
 
+
+.couponn{
+    margin: auto;
+    margin-bottom: 3rem;
+
+}
+
+.coupon{
+    width:8rem;
+
+}
 
 .total{
     margin:auto ;
@@ -166,6 +182,16 @@ select{
 }
 
 
+.website{
+    margin:auto;
+    border: 1px solid;
+    border-radius: 1rem;
+    border: none;
+    padding: 0.75rem;
+    width: 11rem;
+    background-color: white;
+    margin-bottom: 3rem;
+}
 
 /* mobile */
 
@@ -198,13 +224,6 @@ select{
 .logo{
     height: 3rem;
 
-}
-
-
-.website{
-    margin-left: 5rem;
-    padding: 0.75rem;
-    width: 9rem;
 }
 
 .linkis{
@@ -253,19 +272,22 @@ select{
 label{
     margin: auto;
     margin-bottom: 2rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .name{
     width:8rem;
+    margin-left: 1.5rem;
 }
 
 .phoneNumber{
     width:7.2rem;
+    margin-left: 1.4rem;
 }
 
 .email{
     width:8.25rem;
+    margin-left: 1.4rem;
 }
 
 .basic{
@@ -292,20 +314,31 @@ select{
 
 }
 
+.datee{
+    margin-left: 1rem;
+}
+
 .gender{
-    width:10rem;
+    width: 7.4rem;
+    margin-left: 2.5rem;
+}
+
+.purchase{
+    width:6.5rem;
+
 }
 
 
 .tags{
-    margin-left: 1rem;
-    width: 10.5rem;
+    margin-left: 3.8rem;
+    width: 6.3rem;
 }
 
 .based{
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+    margin-top: -1rem;
 }
 
 
@@ -320,6 +353,7 @@ select{
 .types{
     margin: auto;
 }
+
 
 
 .total{
@@ -351,6 +385,7 @@ select{
 .website{
     margin:auto;
     padding: 0.75rem;
+    margin-bottom: 3rem;
 }
 }
 
